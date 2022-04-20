@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
-dots = int(input('Введите количество точек в разбиении:'))
+dots = int(input('Введите количество точек в разбиении: '))
 type = int(input('Способ выбора оснащения (0 - слева, 1 - по центру, 2 - справа): '))
 s = 0
 
