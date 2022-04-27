@@ -12,7 +12,7 @@ x = np.linspace(-1, 0, 1000)
 
 def plotSum(n, t):
     global s
-    weight = 1 / n # ширина каждого из прямоугольников
+    width = 1 / n # ширина каждого из прямоугольников
     for i in range(n):
         if t == 0:
             height = 3**(i/n-1)
@@ -20,9 +20,9 @@ def plotSum(n, t):
             height = 3**((2*i+1)/(2*n)-1)
         elif t == 2:
             height = 3**((i+1)/n-1)
-        rect = patches.Rectangle((i / n - 1, 0), weight, height, linestyle="-.", edgecolor='black', fill=None,
+        rect = patches.Rectangle((i / n - 1, 0), width, height, linestyle="-.", edgecolor='black', fill=None,
                                  linewidth=1.5) # создаём объект прямоугольника
-        s += weight*height
+        s += width*height
         plt.gca().add_patch(rect) # рисуем его
         plt.gca().set_axisbelow(True)
 
